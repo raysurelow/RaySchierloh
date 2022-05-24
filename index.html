@@ -1,1 +1,58 @@
-Hello World
+<head>
+    
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebBuild.json", {onProgress: UnityProgress});
+    </script>
+    <script src="./custom.js"></script>
+  </head>
+  <body>
+    <!-- Tab links -->
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+      <button class="tablinks" onclick="openTab(event, 'Music')">Music</button>
+      <button class="tablinks" onclick="openTab(event, 'Wizarding')">Wizarding</button>
+      <button class="tablinks" onclick="openTab(event, 'The Search')">The Search</button>
+    </div>
+    
+    <!-- Tab content -->
+    <div id="About" class="tabcontent">
+      <h3>About me, resume? Personal? Who knows</h3>
+      <p>I'd like to learn about making websites as well as making anthing.</p>
+    </div>
+    
+    <div id="Music" class="tabcontent">
+      <p>
+        While I've never had the courage to play music in front of anyone I've off and on recorded music and had an interest in learning about songwriting and recording.  This is an album I wrote and recorded in 2016 called forward facing.  It's about embracing change instead of recoiling from it.  Cover is a photo I took on the street we lived on in Columbus at the time.
+      </p>     
+      <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=4145596247/size=large/bgcol=ffffff/linkcol=63b2cc/tracklist=false/transparent=true/" seamless><a href="https://rayschierloh.bandcamp.com/album/forward-facing">Forward Facing by Ray Schierloh</a></iframe>
+    </div>
+    
+    <div id="Wizarding" class="tabcontent">
+      <h3>Wizarding Game Demo</h3>
+      <p>Embed the game directly here?</p>
+      <div class="webgl-content">
+        <div id="gameContainer" style="width: 960px; height: 600px"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+          <div class="title">Wizarding2.0</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="The Search" class="tabcontent">
+      <h3>The Search by Ray Scheirloh and Becky Krotts</h3>
+      <p>Link to the site to buy it. as well as some before and after images</p>
+    </div>
+
+    
+  </body>
+</html>
